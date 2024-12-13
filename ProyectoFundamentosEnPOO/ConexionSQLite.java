@@ -12,7 +12,7 @@ public class ConexionSQLite {
             String url = "jdbc:sqlite:src/ProyectoFundamentosEnPOO/ProyectoProgramacion.db";
             conn = DriverManager.getConnection(url);
             System.out.println("Conexión a SQLite establecida.");
-
+            
             // Crear las tablas si no existen
             crearTablaUsuariosAlumnos(conn);
             crearTablaUsuariosMaestros(conn);
@@ -68,7 +68,8 @@ public class ConexionSQLite {
                 Matricula TEXT NOT NULL,
                 Proposito TEXT NOT NULL,
                 Horas INTEGER NOT NULL,
-                FechaHora TEXT NOT NULL
+                FechaHora TEXT NOT NULL,
+                 Asistencia INTEGER DEFAULT 0 
             );
             """;
         try (Statement stmt = conn.createStatement()) {

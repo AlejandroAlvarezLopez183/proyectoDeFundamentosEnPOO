@@ -25,9 +25,10 @@ public class VentanaRegistroAlSalonDeComputo extends JFrame {
         btnNoInscritos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Crear y mostrar la ventana de asistencia (enlazada a la clase asistenciaClases)
-            	asistenciasAlCentroDeComputo ventanaAsistencia = new asistenciasAlCentroDeComputo();
+                // Crear y mostrar la ventana de asistencia (enlazada a la clase asistenciasAlCentroDeComputo)
+                asistenciasAlCentroDeComputo ventanaAsistencia = new asistenciasAlCentroDeComputo();
                 ventanaAsistencia.setVisible(true);
+                // No cerrar la ventana principal
             }
         });
 
@@ -37,8 +38,10 @@ public class VentanaRegistroAlSalonDeComputo extends JFrame {
         btnInscritos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	 asistenciaClases ventanaAsistenciaAClase = new  asistenciaClases();
-            	 ventanaAsistenciaAClase.setVisible(true);
+                // Crear y mostrar la ventana de asistencia a clases
+                asistenciaClases ventanaAsistenciaAClase = new asistenciaClases();
+                ventanaAsistenciaAClase.setVisible(true);
+                // No cerrar la ventana principal
             }
         });
 
@@ -60,4 +63,3 @@ public class VentanaRegistroAlSalonDeComputo extends JFrame {
         add(btnAtras); // Agregar el botón "Atrás"
     }
 }
-

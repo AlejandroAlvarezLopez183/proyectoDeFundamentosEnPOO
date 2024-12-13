@@ -8,6 +8,7 @@ public class primeraventana {
     static JFrame frame; // Hacer el frame accesible desde otras clases
 
     public static void main(String[] args) {
+    	 new generadorDeQR();
         frame = new JFrame("Sistema de Control Del Centro De Computo");
         frame.setSize(900, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
